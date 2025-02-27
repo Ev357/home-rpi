@@ -81,6 +81,7 @@
       userEmail = "evest.dev@gmail.com";
       extraConfig = {
         init.defaultBranch = "main";
+        credential.helper = "store";
       };
     };
 
