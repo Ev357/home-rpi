@@ -35,7 +35,6 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
 
-    neovim
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -89,6 +88,19 @@
       enable = true;
       shellAliases = {
         la = "ls -lAh";
+      };
+    };
+    nixvim = {
+      enable = true;
+      opts = {
+        number = true;
+        relativenumber = true;
+      };
+      colorschemes.catppuccin = {
+        enable = true;
+        settings = {
+          flavour = "macchiato";
+	};
       };
     };
   };
