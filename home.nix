@@ -85,8 +85,12 @@
         credential.helper = "store";
       };
     };
-
-    bash.enable = true;
+    bash = {
+      enable = true;
+      shellAliases = {
+        la = "ls -lAh";
+      };
+    };
   };
 
   # Let Home Manager install and manage itself.
